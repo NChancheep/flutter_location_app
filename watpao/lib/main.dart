@@ -60,19 +60,26 @@ class _MyHomePageState extends State<MyHomePage> {
             'id': 'mapbox.mapbox-streets-v8'
           }
         ),
-        // MarkerLayerOptions(
-        //   markers: [
-        //     Marker(
-        //       width: 80.0,
-        //       height: 80.0,
-        //       point: latLng.LatLng(51.5, -0.09),
-        //       builder: (ctx) =>
-        //           Container(
-        //             child: FlutterLogo(),
-        //           ),
-        //     ),
-        //   ],
-        // ),
+        MarkerLayerOptions(
+          markers: [
+            Marker(
+              width: 80.0,
+              height: 80.0,
+              point: latLng.LatLng(13.741163702, 100.48949),
+              builder: (ctx) =>
+                  Container(
+                    child: IconButton(
+                      icon: Icon(Icons.location_on),
+                      color: Colors.red,
+                      iconSize:45.0,
+                      onPressed: (){
+                        print('Marked');
+                      },
+                    ),
+                  )
+            )
+          ],
+        ),
       ],
     ));
   }
