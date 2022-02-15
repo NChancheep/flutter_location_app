@@ -1,12 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart' as latLng;
+import 'package:watpao/src/home.dart';
+import 'package:watpao/src/map.dart';
+
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MaterialApp(
+      title: 'Watpao',
+      // Start the app with the "/" named route. In this case, the app starts
+      // on the FirstScreen widget.
+      initialRoute: '/',
+      routes: {
+        // When navigating to the "/" route, build the FirstScreen widget.
+        '/': (context) => const HomePage(),
+        // When navigating to the "/second" route, build the SecondScreen widget.
+        '/mapPage': (context) => const MapPage(),
+      },
+    ),
+  );
 }
 
-class MyApp extends StatelessWidget {
+/*class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
@@ -77,10 +93,11 @@ class _MyHomePageState extends State<MyHomePage> {
                       },
                     ),
                   )
+                  
             )
           ],
         ),
       ],
     ));
   }
-}
+}*/
