@@ -1,29 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:watpao/src/navbar.dart';
 import 'recipe.dart';
 import 'recipe_detail.dart';
+import 'package:watpao/src/navbar.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+void main() {
+  runApp(RecipeApp());
+}
+class RecipeApp extends StatelessWidget {
 
-  // @override
-  // Widget build(BuildContext context) {
-  //   return Scaffold(
-  //     drawer: NavBar(),
-  //     appBar: AppBar(
-  //       title: const Text('WatPao Application'),
-  //     ),
-  //     body: Center(
-  //       child: ElevatedButton(
-  //         child: const Text('Open route'),
-  //         onPressed: () {
-  //           Navigator.pushNamed(context, '/mapPage');
-  //           print('Go to map page');
-  //         },
-  //       ),
-  //     ),
-  //   );
-  // }
+  const RecipeApp({Key? key}) : super(key: key);
+
+  // This widget is the root of your application.
+  // 1
   @override
   Widget build(BuildContext context) {
     // 2
@@ -43,7 +31,9 @@ class HomePage extends StatelessWidget {
       home: const MyHomePage(title: 'Recipe Calculator'),
     );
   }
+
 }
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
 
