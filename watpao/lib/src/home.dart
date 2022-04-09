@@ -31,7 +31,8 @@ class HomePage extends StatelessWidget {
     // 3
     return MaterialApp(
       // 4
-      title: 'Recipe Calculator',
+      
+      title: 'WatPao Application',
       // 5
       theme: theme.copyWith(
         colorScheme: theme.colorScheme.copyWith(
@@ -40,8 +41,9 @@ class HomePage extends StatelessWidget {
         ),
       ),
       // 6
-      home: const MyHomePage(title: 'Recipe Calculator'),
+      home: const MyHomePage(title: 'WatPao Application'),
     );
+    
   }
 }
 class MyHomePage extends StatefulWidget {
@@ -68,6 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // 1
     return Scaffold(
       // 2
+      drawer: NavBar(),
       appBar: AppBar(
         title: Text(widget.title),
       ),

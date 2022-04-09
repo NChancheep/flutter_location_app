@@ -67,27 +67,13 @@ class _RecipeDetailState extends State<RecipeDetail> {
               ),
             ),
 
-            // TODO: Add Slider() here
-            Slider(
-              // 10
-              min: 1,
-              max: 10,
-              divisions: 9,
-              // 11
-              label: '${_sliderVal} ',
-              // 12
-              value: _sliderVal.toDouble(),
-              // 13
-              onChanged: (newValue) {
-                setState(() {
-                  _sliderVal = newValue.round();
-                });
-              },
-              // 14
-              activeColor: Colors.green,
-              inactiveColor: Colors.black,
+         
+            RaisedButton(
+              onPressed: () {
+                        Navigator.pushNamed(context, './mapPage');
+                      },
+              child: new Text('Click me'),
             ),
-
           ],
         ),
       ),
