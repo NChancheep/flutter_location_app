@@ -15,17 +15,17 @@ class NavBar extends StatelessWidget {
                 color: Colors.green,
                 image: DecorationImage(
                     fit: BoxFit.fill,
-                    image: AssetImage('assets/images/cover.jpg'))),
+                    image: AssetImage(''))),
           ),
           ListTile(
             leading: Icon(Icons.input),
-            title: Text('Welcome'),
+            title: Text('k'),
             onTap: () => {},
           ),
           ListTile(
             leading: Icon(Icons.verified_user),
-            title: Text('Profile'),
-            onTap: () => {Navigator.of(context).pop()},
+            title: Text('About us'),
+            onTap: () => {Navigator.pushNamed(context, '/aboutusPage')},
           ),
         ],
       ),

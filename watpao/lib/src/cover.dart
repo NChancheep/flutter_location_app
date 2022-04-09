@@ -21,6 +21,12 @@ class CoverPage extends StatelessWidget {
             Navigator.of(context).pushNamed('/homePage');
           },
           ),
+          ElevatedButton(
+            child: const Text('About us'),
+          onPressed: () {
+            Navigator.of(context).pushNamed('/aboutusPage');
+          },
+          ),
         ],
       ),
         ),  
