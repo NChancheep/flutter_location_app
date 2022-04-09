@@ -66,6 +66,14 @@ flutter:
   assets:
     - assets/wat_arun.jpg
     - assets/watpao_cover.png
+    - assets/wat_bawon.jpg
+    - assets/wat_pho.jpg
+    - assets/wat_pra_kaew.jpg
+    - assets/wat_radbopit.jpg
+    - assets/wat_sutat.jpg
+    - assets/kantapong.jpg
+    - assets/chancheep.jpg
+    
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
