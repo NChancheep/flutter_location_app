@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-
 class geo extends StatefulWidget {
   const geo({Key? key}) : super(key: key);
   // location
@@ -40,8 +39,9 @@ class _MyAppState extends State<geo> {
 
     if (await canLaunch(googleUrl)) {
       await launch(googleUrl);
-    } else
+    } else {
       throw ("Couldn't open google maps");
+    }
   }
 
   @override
@@ -96,7 +96,7 @@ class _MyAppState extends State<geo> {
                 },
                 child: Text("Get User Location"),
               ),
-            
+
               FlatButton(
                 color: Colors.white,
                 onPressed: () {

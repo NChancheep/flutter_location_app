@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:watpao/src/aboutus.dart';
 
 class NavBar extends StatelessWidget {
   @override
@@ -6,26 +7,29 @@ class NavBar extends StatelessWidget {
     return Drawer(
       child: ListView(
         children: <Widget>[
-          DrawerHeader(
+          const DrawerHeader(
             child: Text(
               'Side menu',
               style: TextStyle(color: Colors.white, fontSize: 25),
             ),
             decoration: BoxDecoration(
                 color: Colors.green,
-                image: DecorationImage(
-                    fit: BoxFit.fill,
-                    image: AssetImage(''))),
+                image:
+                    DecorationImage(fit: BoxFit.fill, image: AssetImage(''))),
           ),
           ListTile(
-            leading: Icon(Icons.input),
-            title: Text('k'),
+            leading: const Icon(Icons.input),
+            title: const Text('k'),
             onTap: () => {},
           ),
           ListTile(
-            leading: Icon(Icons.verified_user),
-            title: Text('About us'),
-            onTap: () => {Navigator.pushNamed(context, '/aboutusPage')},
+            leading: const Icon(Icons.verified_user),
+            title: const Text('About us'),
+            onTap: () => {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                return const AboutusPage();
+              })),
+            },
           ),
         ],
       ),
