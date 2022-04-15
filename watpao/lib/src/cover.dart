@@ -39,6 +39,7 @@ class CoverPage extends StatelessWidget {
                   color: Colors.red[900],
                   textColor: Colors.white,
               ),
+              
             ],
           ),
         ),  
