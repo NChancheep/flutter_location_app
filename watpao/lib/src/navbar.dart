@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:watpao/src/aboutus.dart';
+import 'package:watpao/src/cover.dart';
 
 class NavBar extends StatelessWidget {
   @override
@@ -15,12 +16,16 @@ class NavBar extends StatelessWidget {
             decoration: BoxDecoration(
                 color: Colors.green,
                 image:
-                    DecorationImage(fit: BoxFit.fill, image: AssetImage('assets/wat_arun.jpg'))),
+                    DecorationImage(fit: BoxFit.fill, image: AssetImage('assets/mu.jpg'))),
           ),
           ListTile(
             leading: const Icon(Icons.input),
-            title: const Text('k'),
-            onTap: () => {},
+            title: const Text('First page'),
+            onTap: () => {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                return const CoverPage();
+              })),
+            },
           ),
           ListTile(
             leading: const Icon(Icons.verified_user),
@@ -31,6 +36,7 @@ class NavBar extends StatelessWidget {
               })),
             },
           ),
+          
         ],
       ),
     );

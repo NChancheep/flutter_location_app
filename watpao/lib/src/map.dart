@@ -13,7 +13,7 @@ class MapPage extends StatelessWidget {
       ),
     body: FlutterMap(
       options: MapOptions(
-        center: latLng.LatLng(13.736717, 100.523186),
+        center: latLng.LatLng(13.793406, 100.322514),
         zoom: 13.0,
       ),
       layers: [
@@ -29,7 +29,7 @@ class MapPage extends StatelessWidget {
             Marker(
               width: 80.0,
               height: 80.0,
-              point: latLng.LatLng(13.741163702, 100.48949),
+              point: latLng.LatLng(13.793406, 100.322514),
               builder: (ctx) =>
                   Container(
                     child: IconButton(
@@ -43,6 +43,7 @@ class MapPage extends StatelessWidget {
                   )
                   
             )
+            
           ],
         ),
       ],

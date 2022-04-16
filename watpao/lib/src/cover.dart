@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:watpao/src/home.dart';
+import 'package:watpao/src/aboutus.dart';
 
 class CoverPage extends StatelessWidget {
   const CoverPage({Key? key}) : super(key: key);
@@ -23,9 +25,11 @@ class CoverPage extends StatelessWidget {
               ElevatedButton(
                 child: const Text('Get started',
                     style: TextStyle(color: Colors.white)),
-                onPressed: () {
-                  Navigator.of(context).pushNamed('/homePage');
-                },
+                onPressed: () => {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                return const HomePage();
+              })),
+            },
                 style: ElevatedButton.styleFrom(primary: Colors.red[900]),
               ),
               const SizedBox(
@@ -34,9 +38,11 @@ class CoverPage extends StatelessWidget {
               ElevatedButton(
                 child: const Text('About us',
                     style: TextStyle(color: Colors.white)),
-                onPressed: () {
-                  Navigator.of(context).pushNamed('/aboutusPage');
-                },
+                onPressed: () => {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                return const AboutusPage();
+              })),
+            },
                 style: ElevatedButton.styleFrom(primary: Colors.red[900]),
               ),
               const SizedBox(
