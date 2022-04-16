@@ -43,7 +43,7 @@ class CoverPage extends StatelessWidget {
                 height: 20.0,
               ),
               ElevatedButton(
-                child: const Text('Geo', style: TextStyle(color: Colors.white)),
+                child: const Text('Your location', style: TextStyle(color: Colors.white)),
                 onPressed: () async {
                   final location = await Geolocator.getCurrentPosition(
                     desiredAccuracy: LocationAccuracy.high,
