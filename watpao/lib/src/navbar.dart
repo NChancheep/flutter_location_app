@@ -36,6 +36,7 @@ class NavBar extends StatelessWidget {
               })),
             },
           ),
+          
         ],
       ),
     );

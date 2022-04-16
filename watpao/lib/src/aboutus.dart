@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:watpao/src/navbar.dart';
+import 'package:watpao/src/map.dart';
+
 class AboutusPage extends StatelessWidget {
   const AboutusPage({Key? key}) : super(key: key);
 
@@ -115,13 +117,23 @@ class AboutusPage extends StatelessWidget {
                 ],
               ),
             ),
-          
+            ElevatedButton(
+                child: const Text('Our university location',
+                    style: TextStyle(color: Colors.white)),
+                onPressed: () => {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                return const MapPage();
+              })),
+            },
+                style: ElevatedButton.styleFrom(primary: Colors.red[900]),
+              ),
             // const CircleAvatar(
             //   radius: 50.0,
             //   backgroundImage: AssetImage('assets/kantapong.jpg'),
             // ),
             ],  
-          ),  
+          ),
+            
         ),  
       ),  
     );  
