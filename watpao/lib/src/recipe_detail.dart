@@ -64,7 +64,7 @@ class _RecipeDetailState extends State<RecipeDetail> {
                   // 9
                   // TODO: Add ingredient.quantity
                   return Text(
-                      '${ingredient.count*_sliderVal} ${ingredient.name} ${ingredient.province} ${ingredient.latitude} ${ingredient.longitude}');
+                      '${ingredient.name} ${ingredient.province} ${ingredient.latitude} ${ingredient.longitude}');
                 },
               ),
             ),
@@ -80,8 +80,10 @@ class _RecipeDetailState extends State<RecipeDetail> {
                   // 9
                   // TODO: Add ingredient.quantity
                   return ElevatedButton(
-                child: const Text('Geo', style: TextStyle(color: Colors.white)),
+                child: const Text('Your location', style: TextStyle(color: Colors.white)),
                 onPressed: () async {
+                  LocationPermission permission;
+                  permission = await Geolocator.requestPermission();
                   final location = await Geolocator.getCurrentPosition(
                     desiredAccuracy: LocationAccuracy.high,
                   );
