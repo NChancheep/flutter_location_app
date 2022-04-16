@@ -82,6 +82,8 @@ class _RecipeDetailState extends State<RecipeDetail> {
                   return ElevatedButton(
                 child: const Text('Your location', style: TextStyle(color: Colors.white)),
                 onPressed: () async {
+                  LocationPermission permission;
+                  permission = await Geolocator.requestPermission();
                   final location = await Geolocator.getCurrentPosition(
                     desiredAccuracy: LocationAccuracy.high,
                   );
