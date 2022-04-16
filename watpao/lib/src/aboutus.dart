@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:watpao/src/navbar.dart';
 class AboutusPage extends StatelessWidget {
   const AboutusPage({Key? key}) : super(key: key);
 
@@ -9,8 +9,11 @@ class AboutusPage extends StatelessWidget {
     return MaterialApp(  
         
       home: Scaffold(
+        drawer: NavBar(),
+        appBar: AppBar(
+        title: Text("widget.title"),
+        ),
         backgroundColor: Colors.red[300],
-
         body: SafeArea(  
           child: Column(   
             mainAxisAlignment: MainAxisAlignment.center,           
