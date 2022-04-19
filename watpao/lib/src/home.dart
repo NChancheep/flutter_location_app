@@ -8,40 +8,25 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // 2
     final ThemeData theme = ThemeData();
-    // 3
     return MaterialApp(
-      // 4
-      
-      title: 'WatPao Application',
-      // 5
+      title: 'Wat-Pao',
       theme: theme.copyWith(
         colorScheme: theme.colorScheme.copyWith(
-          primary: Colors.grey,
-          secondary: Colors.black,
+          primary: Colors.red[900],
         ),
       ),
-      // 6
-      home: const MyHomePage(title: 'WatPao Application'),
+      home: const MyHomePage(
+        title: 'Wat-Pao',
+        ),
+      
     );
     
   }
 }
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
   final String title;
-
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
@@ -49,49 +34,28 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    // 1
     return Scaffold(
-      // 2
       drawer: NavBar(),
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      // 3
       body: SafeArea(
-        // TODO: Replace child: Container()
-        // 4
-        // 4
         child: ListView.builder(
-          // 5
           itemCount: Recipe.samples.length,
-          // 6
           itemBuilder: (BuildContext context, int index) {
-            // 7
-            // TODO: Update to return Recipe card
-            // TODO: Add GestureDetector
-            // 7
             return GestureDetector(
-              // 8
               onTap: () {
-                // 9
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      // 10
-                      // TODO: Replace return with return RecipeDetail()
                       return RecipeDetail(recipe: Recipe.samples[index]);
-
                     },
                   ),
                 );
               },
-              // 11
               child: buildRecipeCard(Recipe.samples[index]),
             );
-
-
-
           },
         ),
 
@@ -99,32 +63,33 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-// TODO: Add buildRecipeCard() here
   Widget buildRecipeCard(Recipe recipe) {
     return Card(
-      // 1
+      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      color: Colors.white60,
       elevation: 2.0,
-      // 2
       shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10.0)),
-      // 3
+          borderRadius: BorderRadius.circular(20.0)),
       child: Padding(
         padding: const EdgeInsets.all(16.0),
-        // 4
         child: Column(
           children: <Widget>[
-            Image(image: AssetImage(recipe.imageUrl)),
-            // 5
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20), // Image border
+              child: SizedBox.fromSize(
+                child: Image(image: AssetImage(recipe.imageUrl)),
+              ),
+            ),
             const SizedBox(
               height: 14.0,
             ),
-            // 6
             Text(
               recipe.label,
               style: const TextStyle(
                 fontSize: 20.0,
                 fontWeight: FontWeight.w700,
-                fontFamily: 'Palatino',
+                fontFamily: 'OpenSan',
+                color: Colors.black,
               ),
             )
           ],

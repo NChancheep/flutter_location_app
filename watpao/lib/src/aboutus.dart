@@ -13,44 +13,35 @@ class AboutusPage extends StatelessWidget {
       home: Scaffold(
         drawer: NavBar(),
         appBar: AppBar(
-        title: Text("widget.title"),
+        title: Text("About Us"),
+        backgroundColor: Colors.red[900],
         ),
-        backgroundColor: Colors.red[300],
+        backgroundColor: Colors.white,
         body: SafeArea(  
           child: Column(   
             mainAxisAlignment: MainAxisAlignment.center,           
           children: <Widget>[  
-                        
-            ClipRRect(
-              child: Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(10.0),
-                margin: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20),
-                color: Colors.red[900],
-                child: const Center(
-                  child: Text("About Us",style: 
-                  TextStyle(
-                    color: Colors.white,
-                  ),),
-                ),
-              ),
-            ),
-          
             const CircleAvatar(
               radius: 50.0,
               backgroundImage: AssetImage('assets/chancheep.jpg'),
             ),
-            const Text("Chancheep",style: 
+            const SizedBox(
+              height: 10,
+            ),
+            const Text("Chancheep	Mahacharoensuk",style: 
               TextStyle(
-                fontSize: 40.0,
-                color: Colors.white,
+                fontSize: 20.0,
+                color: Colors.black,
                 fontWeight: FontWeight.bold,
               ),
             ),
+            const SizedBox(
+              height: 10,
+            ),
             Text("FLUTTER DEVELOPER",style: 
               TextStyle(
-                color: Colors.teal.shade100,
-                fontSize: 20.0,
+                color: Colors.red[900],
+                fontSize: 10.0,
                 letterSpacing: 2.5,
               ),
             ),
@@ -75,25 +66,28 @@ class AboutusPage extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(
-              width: 10.0,
-            ),
             
             const CircleAvatar(
               radius: 50.0,
               backgroundImage: AssetImage('assets/kantapong.jpg'),
             ),
-            const Text("Kantapong",style: 
+            const SizedBox(
+              height: 10,
+            ),
+            const Text("Kantapong Matangkarat",style: 
               TextStyle(
-                fontSize: 40.0,
-                color: Colors.white,
+                fontSize: 20.0,
+                color: Colors.black,
                 fontWeight: FontWeight.bold,
               ),
             ),
+            const SizedBox(
+              height: 10.0,
+            ),
             Text("FLUTTER DEVELOPER",style: 
               TextStyle(
-                color: Colors.teal.shade100,
-                fontSize: 20.0,
+                color: Colors.red[900],
+                fontSize: 10.0,
                 letterSpacing: 2.5,
               ),
             ),
