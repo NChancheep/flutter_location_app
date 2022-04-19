@@ -6,6 +6,7 @@ import 'package:watpao/src/home.dart';
 import 'package:watpao/src/map.dart';
 import 'package:watpao/src/aboutus.dart';
 
+// this main is for route
 
 void main() {
   runApp(

@@ -49,3 +49,5 @@ class NavBar extends StatelessWidget {
     );
   }
 }
+// thanks this website to guide us to make the nav bar
+// https://medium.com/barisnurlu/flutter-how-to-create-hamburger-menu-6018b10741ff

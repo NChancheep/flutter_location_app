@@ -16,13 +16,13 @@ class CoverPage extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              Image.asset('assets/watpao_cover.png'),
+              Image.asset('assets/watpao_cover.png'),// image of our logo app
               const SizedBox(
                 height: 20.00,
                 width: 300.00,
                 child: Divider(color: Colors.white,),
               ),
-              ElevatedButton(
+              ElevatedButton( // first button for going to home page (Elevated button is newer version of button function)
                 child: const Text('Get started',
                     style: TextStyle(
                       color: Colors.white,
@@ -37,7 +37,10 @@ class CoverPage extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
                 ),
-                onPressed: () => {
+                onPressed: () => { //use onpressed function
+                  // use this way to navigate to specific page 
+                  //by some reason you can't use nav push directly and it will not go to specific page 
+                  //but if it the case that switch between first page and second page it can do that way.
                   Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                   return const HomePage();
                 })),
@@ -48,6 +51,8 @@ class CoverPage extends StatelessWidget {
               ),
               ElevatedButton(
                 child: const Text('Your location', style: TextStyle(color: Colors.white)),
+                // in the case of using this function to open other app or use gps of that app in emulator
+                // it must be to make a request but if you do in web browser it no need to get permission in async 
                 onPressed: () async {
                   LocationPermission permission;
                   permission = await Geolocator.requestPermission();

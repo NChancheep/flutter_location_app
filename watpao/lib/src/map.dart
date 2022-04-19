@@ -17,7 +17,7 @@ class MapPage extends StatelessWidget {
         zoom: 13.0,
       ),
       layers: [
-        TileLayerOptions(
+        TileLayerOptions( //map fetch from mapbox
           urlTemplate: "https://api.mapbox.com/styles/v1/shinozukayuki/ckzo4pism002215np4tzhaz2c/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic2hpbm96dWtheXVraSIsImEiOiJja3pvNGxqdDUyejF1MnZuMmJsNjIweGV2In0.ZsFS7t6995sYrgryjT7kEg",
           additionalOptions: {
             'accessToken': 'pk.eyJ1Ijoic2hpbm96dWtheXVraSIsImEiOiJja3pvNGxqdDUyejF1MnZuMmJsNjIweGV2In0.ZsFS7t6995sYrgryjT7kEg',
