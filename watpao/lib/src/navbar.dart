@@ -6,11 +6,12 @@ class NavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      backgroundColor: Colors.red[900],
       child: ListView(
         children: <Widget>[
           const DrawerHeader(
             child: Text(
-              'Side menu',
+              'Wat-Pao',
               style: TextStyle(color: Colors.white, fontSize: 25),
             ),
             decoration: BoxDecoration(
@@ -19,8 +20,11 @@ class NavBar extends StatelessWidget {
                     DecorationImage(fit: BoxFit.fill, image: AssetImage('assets/mu.jpg'))),
           ),
           ListTile(
-            leading: const Icon(Icons.input),
-            title: const Text('First page'),
+            leading: const Icon(
+              Icons.home,
+              color: Colors.white
+            ),
+            title: const Text('First page',style:TextStyle(color: Colors.white),),
             onTap: () => {
               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                 return const CoverPage();
@@ -28,8 +32,11 @@ class NavBar extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: const Icon(Icons.verified_user),
-            title: const Text('About us'),
+            leading: const Icon(
+              Icons.account_box,
+              color: Colors.white,
+              ),
+            title: const Text('About us',style:TextStyle(color: Colors.white),),
             onTap: () => {
               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                 return const AboutusPage();
